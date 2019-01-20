@@ -1,0 +1,964 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+/*SLIDER*/
+
+
+.slider{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.slider .slide{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	visibility: hidden;
+	opacity: 0;
+	animation: slider 25s linear infinite;
+}
+
+
+.slider .slide:nth-child(1){
+	animation-delay: 0s;
+}
+
+.slider .slide:nth-child(2){
+	animation-delay: 5s;
+}
+
+.slider .slide:nth-child(3){
+	animation-delay: 10s;
+}
+
+.slider .slide:nth-child(4){
+	animation-delay: 15s;
+}
+
+.slider .slide:nth-child(5){
+	animation-delay: 20s;
+}
+
+
+
+.slider .slide img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+
+}
+
+
+
+
+@keyframes slider{
+
+	0%{
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	2%{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	18%{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	20%,100%{
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	
+}
+
+
+
+
+
+
+
+/*BARRA DE NAVEGACION*/
+
+
+.navbar{
+  position: absolute;
+  height: 80px;
+  overflow: hidden;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+}
+.logo{
+  background: url(logo.png) no-repeat 50% 50%;
+  background-size: contain;
+  width: 180px;
+  height: 18px;
+  float: left;
+  margin-left:20px;
+}
+.menu{
+  position: absolute;
+  right: 80px;
+}
+.menu a{
+  color: rgba(255,255,255,.7);
+  text-decoration: none;
+  font-weight: 400;
+  margin-right: 20px;
+  /*padding: 0px 10px;*/
+  transition: color 0.3s;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+.menu a:hover{
+  /*color: #6ab04c;*/
+}
+
+.boton{
+  display: none;
+  position: absolute;
+  right: 20px;
+}
+.boton:hover > span{
+ /* background: red;*/
+}
+.boton span{
+  display: block;
+  margin: 6px;
+  width: 40px;
+  height: 3px;
+  background: black;
+}
+
+@media only screen and (max-width : 600px) {
+  .navbar{
+    overflow: visible;
+    background: black;
+
+
+  }
+  .menu{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 80px;
+    background: black;
+    overflow: hidden;
+    max-height: 0;
+  }
+  .menu a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+  .boton{
+    display: block;
+    cursor: pointer;
+    background: yellow;
+  }
+  .show{
+    max-height: 500px;
+  }
+}
+
+
+/*SERVICIOS*/
+
+
+.servicios{
+	height: 100vh;
+}
+
+.servicios h1{
+	text-align: center;
+	padding: 10px 0;
+
+}
+
+.servicios img{
+  width: 40%;
+  height: 100%;
+  float: right;
+  margin-right: 50px;
+}
+
+.servicios p{
+  position: relative;
+  top: 20%;
+  font-size: 50px;
+  margin-left: 30px;
+  margin-top: 150px;
+  font-family: 'Anton', sans-serif;
+}
+
+
+
+
+
+
+/*SEDES*/
+.sedes{
+  height: 100vh;
+  background: #222725;
+}
+
+.sedes h1{
+
+  position: relative;
+  top: 30%;
+  left: 23%;
+  color: #c2c1a5;
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.sedes .button{
+  border: 2px solid #fff;
+  position: relative;
+  top: 30%;
+  left: 39%;
+  padding: 24px 48px;
+  color: white;
+  font-size: 12px;
+  background: transparent;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  /*z-index: 1;*/
+  transition: 0.8s ease-out;
+}
+
+.sedes .button:hover{
+  color: #ed6b86;
+  
+}
+  
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+
+.footer{ 
+  text-align: center;
+  color: white;
+  height: 50vh;
+  background: #463239;
+  text-align: left;
+}
+
+.footer h1{
+  font-size: 30px;
+  
+}
+
+.footer ul{
+  
+}
+
+.footer ul li{
+  margin-top: 10px;
+}
+
+
+
+
+
+/*CONTACTO*/
+
+.contacto{
+  height: 100vh;
+  /*background: #eee;*/
+}
+
+.contacto h1{
+  text-align: center;
+}
+
+
+
+#contenido {
+    background-color: white;
+    margin-top: 40px;
+    /*-webkit-box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);*/
+}
+#contenido::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+header {
+    padding: 10px;
+    text-align: center;
+    /*color: white;*/
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+form {
+    margin: 30px 0;
+}
+#loaders {
+    text-align: center;
+}
+#loaders img {
+    width: 150px;
+    margin: 0 auto;
+    /* display: none; */
+}
+#resetBtn {
+    float: right;
+}
+
+#spinner {
+    display: none;
+}
+
+
+
+
+
+.mapa{
+  height: 100vh;
+}
+
+.mapa iframe{
+  margin-top: 50px;
+}
+
+
+
+
+.servicioslocal1{
+  height: 50vh;
+}
+
+.servicioslocal1 .parrafo1{
+  font-size: 15px;
+  text-align: center;
+}
+
+.servicioslocal1 .icono{
+  width: 20%;
+  float: left;
+
+}
+
+.servicioslocal1 .parrafo2{
+  /*text-align: center;*/
+  /*margin-left: -250px;*/
+}
+
+
+.servicioslocal1 .parrafo3{
+  margin-top: 18px;
+}
+
+
+
+.horariolocal1{
+  height: 40vh;
+}
+
+
+
+
+.claseslocal1{
+  height: 130vh;
+}
+
+.claseslocal1{
+  text-align: center;
+}
+
+
+
+.claseslocal1 table thead tr{
+  background: #8e8358;
+}
+
+.claseslocal1 table thead tr td{
+  border: 2px solid white;
+}
+
+.claseslocal1 table tbody tr td span{
+  font-size: 12px;
+}
+
+.claseslocal1 table tbody tr td:first-child{
+  text-align: center;
+  color: #d96c06;
+}
+
+.claseslocal1 table tbody tr td{
+  border: 2px solid #f5efed;
+}
+
+.claseslocal1 table thead tr{
+
+}
+
+
+
+
+.clases{
+  height: 400vh;
+}
+
+.clases h1{
+  text-align: center;
+  font-size: 35px;
+}
+
+.clases img{
+  transition: all 0.9s;
+  margin-top: 50px;
+  /*padding-right: 80px;*/
+}
+
+.clases img:hover{
+  transform: scale(1.1);
+}
+
+
+
+.tituloportada h1{
+  position: absolute;
+  top: 26%;
+  left: 35%;
+  font-size: 8em;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+
+}
+
+
+
+
+
+.liderlocal1{
+  height: 100vh;
+  background: #212529;
+  background: rgb(238, 238, 238);
+}
+
+.liderlocal1 p{
+  font-size: 19px;
+  text-align: left;
+}
+
+
+
+
+.slider .tituloslide h1{
+  position: absolute;
+  top: 27%;
+  left: 22%;
+  font-size: 6em;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  z-index: 1;
+  /*letter-spacing: 4;*/
+
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1199px) { 
+
+/* SECCION CLASES*/
+
+.liderlocal1 h1{
+  /*color: green;*/
+}
+
+
+.clases h1{
+  /*color: green;*/
+}
+
+
+.clases{
+  height: 400vh;
+}
+
+/* SECCION CLASES FINALIZADO*/
+
+
+
+
+
+
+/* SECCION INICIO*/
+
+.slider .slide .tituloslide h1{
+  font-size: 68px;
+}
+
+
+
+.servicios{
+  height: 80vh;
+}
+
+
+.servicios p{
+  font-size: 35px;
+  position: relative;
+  top: 50px;
+ /* color: orange;*/
+}
+
+.servicios img{
+  height: 500px;
+}
+
+.sedes h1{
+  font-size: 40px;
+}
+
+.sedes .button{
+  position: relative;
+  top: 240px;
+  left: 32%;
+}
+
+
+/* SECCION INICIO FINALIZADO */
+
+
+
+
+
+/* SECCION SEDE */
+
+
+.mapa{
+  height: 80vh;
+}
+
+.horariolocal1{
+  height: 35vh;
+}
+
+.claseslocal1{
+  height: 150vh;
+}
+
+.claseslocal1 h1{
+  margin-top: 150px;
+}
+
+.liderlocal1{
+  height: 80vh;
+}
+
+.liderlocal1 img{
+  margin-top: 30px;
+}
+
+/* SECCION SEDE FINALIZADO*/
+
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {   
+
+/* SECCION CLASES*/
+
+
+.clases{
+  height: 700vh;
+}
+
+.claseslocal1{
+  height: 150vh;
+}
+
+
+
+.clases h1{
+  /*color: red;*/
+}
+
+
+.slider3 .tituloportada h1{
+  position: absolute;
+  top: 35%;
+  left: 105px;
+  object-fit: cover;
+  margin: auto;
+}
+
+/* SECCION CLASES FINALIZADO*/
+
+
+
+
+
+/* SECCION INICIO*/
+
+.slider .slide .tituloslide h1{
+  font-size: 68px;
+}
+
+.servicios{
+  height: 80vh;
+}
+
+.servicios p{
+  font-size: 35px;
+  position: relative;
+  top: 50px;
+  /*color: blue;*/
+}
+
+.servicios img{
+  height: 500px;
+}
+
+.sedes h1{
+  font-size: 40px;
+}
+
+.sedes .button{
+  position: relative;
+  top: 240px;
+  left: 32%;
+}
+
+/* SECCION INICIO FINALIZADO */
+
+
+
+
+
+
+
+/* SECCION SEDE */
+
+
+.liderlocal1{
+  height: 80vh;
+}
+
+
+.liderlocal1 h1{
+  /*color: yellow;*/
+}
+
+.liderlocal1 img{
+  margin-top: 30px;
+}
+
+
+.servicioslocal1{
+  height: 60vh;
+}
+
+.mapa{
+  height: 80vh;
+}
+
+.horariolocal1{
+  height: 35vh;
+}
+
+/* SECCION SEDE FINALIZADO */
+
+
+}
+ 
+
+
+
+
+
+
+
+
+@media (max-width: 600px){
+
+  /* SECCION CLASES*/
+
+  .clases h1{
+    /*color: purple;*/
+  }
+
+  .clases{
+  height: 700vh;
+  }
+
+  .contacto img{
+    display: none;
+  }
+
+
+  .slider3 .tituloportada h1{
+  position: absolute;
+  top: 35%;
+  left: 25px;
+  object-fit: cover;
+  margin: auto;
+}
+
+/* SECCION CLASES FINALIZADO*/
+
+
+
+
+/* SECCION INICIO*/
+
+.slider .slide .tituloslide h1{
+  font-size: 60px;
+}
+
+
+.servicios{
+  height: 70vh;
+}
+
+
+
+.servicios img{
+  display: none;
+}
+
+.servicios p{
+  font-size: 35px;
+
+  /*color: green;*/
+}
+
+.sedes h1{
+  position: relative;
+  left: 10%;
+  font-size: 55px;
+  padding-right: 10px;
+}
+
+.sedes .button{
+  position: relative;
+  top: 225px;
+  left: 10%;
+  
+}
+
+
+
+
+/* SECCION SEDES*/
+
+.horariolocal1{
+  height: 70vh;
+
+
+}
+
+.servicioslocal1{
+  height: 160vh;
+}
+
+.mapa{  
+  height: 85vh;
+}
+
+.liderlocal1{
+  height: 160vh;
+}
+
+.liderlocal1 h1{
+  /*color: green;*/
+}
+
+.claseslocal1{
+  height: 170vh;
+}
+
+/* SECCION SEDES FINALIZADO*/
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) { 
+
+
+/* SECCION CLASES*/
+.liderlocal1 h1{
+  /*color: blue;*/
+}
+
+.horariolocal1 {
+  height: 80vh;
+
+}
+
+.servicioslocal1{
+
+  height: 150vh;
+}
+
+
+.claseslocal1{
+  height: 200vh;
+}
+
+
+
+.clases h1{
+  /*color: yellow;*/
+}
+
+
+.clases{
+  height: 700vh;
+}
+
+.contacto img{
+  display: none;
+}
+
+.footer{
+  height: 80vh;
+}
+
+
+.slider3 .tituloportada h1{
+  position: absolute;
+  top: 30%;
+  left: 20px;
+  object-fit: cover;
+  margin: auto;
+}
+
+
+/* SECCION CLASES FINALIZADO*/
+
+
+
+
+/* SECCION INICIO*/
+
+.slider .slide .tituloslide h1{
+  font-size: 60px;
+}
+
+
+.servicios{
+  height: 70vh;
+}
+
+
+
+.servicios img{
+  display: none;
+}
+
+.servicios p{
+  font-size: 35px;
+  /*color: yellow;*/
+}
+
+.sedes h1{
+  position: relative;
+  left: 10%;
+  font-size: 45px;
+}
+
+.sedes .button{
+  position: relative;
+  top: 225px;
+  left: 10%;
+  
+}
+
+/* SECCION INICIO FINALIZADO */
+
+
+
+
+
+
+
+/* SECCION SEDES*/
+
+.horariolocal1{
+  height: 70vh;
+
+
+}
+
+.mapa{
+  height: 85vh;
+}
+
+.liderlocal1{
+  height: 160vh;
+}
+
+.claseslocal1{
+  height: 170vh;
+}
+
+/* SECCION SEDES FINALIZADO*/
+
+
+
+}
