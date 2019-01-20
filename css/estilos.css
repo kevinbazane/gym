@@ -725,6 +725,10 @@ form {
 
 @media (max-width: 600px){
 
+  .footer{
+  height: 80vh;
+  }
+	
   /* SECCION CLASES*/
 
   .clases h1{
